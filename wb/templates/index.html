@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block contend %}
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">REG No</th>
+      <th scope="col">Course</th>
+      <th scope="col">Topic</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  {% if data %}
+  {% for d in data  %}
+    <tr>
+      <th scope="row">{{d.id}}</th>
+      <td>{{d.first_name}}</td>
+      <td>{{d.last_name}}</td>
+      <td>{{d.reg_no}}</td>
+      <td> {{d.cource}} </td>
+      <td>{{d.topic}} </td>
+    </tr>
+
+  {% endfor %}
+  {% endif %}
+    
+  
+  </tbody>
+</table>
+
+
+
+
+{% endblock contend %}
