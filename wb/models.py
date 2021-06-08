@@ -7,6 +7,7 @@ class ModelTable(models.Model):
     last_name =  models.CharField(max_length=255)
     reg_no =  models.CharField(max_length=255)
     cource =  models.CharField(max_length=255)
+    supervisor =  models.CharField(max_length=255,blank=True,null=True)
     topic =  models.TextField()
 
     def __str__(self):
